@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
 const Port = 3000;
 
 app.use(
@@ -8,7 +9,14 @@ app.use(
 
 app.use(express.static('assets')); 
 
-// app.use('/' , require('./routes'));
+// express layouts
+app.use(expressLayouts);
+
+//set the view engine to ejs
+app.set('view engine', 'ejs');
+app.set('views' , './views');
+
+app.use('/' , require('./routes'));
 
 app.listen(Port , (err)=>{
     if(err){

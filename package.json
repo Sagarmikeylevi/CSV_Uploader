@@ -4,12 +4,14 @@
   "description": "This is a web application about CSV file uploader",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js", 
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sagar Das",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1"
   }
 }
