@@ -4,7 +4,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
     </div>
 
-    <div class='table-container'>
+    <div class='table-container' id="table-container">
         <table style="width:100%">
             <thead>
                 <tr>
@@ -13,9 +13,9 @@
                     <% } %>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-body">
                 <% for(let i=0;i<csvData.length;i++) { %>
-                    <tr id="row-<%= i %>">
+                    <tr>
                         <% for(const [key, value] of Object.entries(csvData[i])) { %>
                             <td class="col-md-2"><%= value %></td>
                         <% } %>
@@ -25,3 +25,5 @@
         </table>
     </div>
 </div>
+
+<script src="/Js/csvFile.js"></script>

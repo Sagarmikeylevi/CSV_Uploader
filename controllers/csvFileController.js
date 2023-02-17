@@ -49,7 +49,7 @@ module.exports.uploadedcsvNames = ()=>{
 module.exports.open = (req , res) =>{
   const csvParsedData = [];             
   const index = req.params.index;
-  
+  // console.log(csvFiles[index])
   fs.createReadStream(path.join(__dirname,'../','/uploads',csvFiles[index])) 
   .pipe(csv())
   .on('data', (data) => csvParsedData.push(data))
