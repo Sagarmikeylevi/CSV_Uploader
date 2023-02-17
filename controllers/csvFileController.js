@@ -60,3 +60,16 @@ module.exports.open = (req , res) =>{
     });
   });
 }
+
+module.exports.delete = function(req,res){
+  let index = req.params.index;
+  try { var files = fs.readdirSync(path.join(__dirname,'..','/uploads')); }
+    catch(e) { return; }
+    if (files.length > 0){
+        var filePath = path.join(__dirname,'..','/uploads',csvFiles[index]);
+        if (fs.statSync(filePath).isFile())
+          fs.unlinkSync(filePath);
+    }
+    csvFiles.splice(index,1);
+    return res.redirect('back');
+}
