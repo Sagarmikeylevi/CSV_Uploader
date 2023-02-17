@@ -1,29 +1,37 @@
 <div class="wrapper">
+    <!-- upload section -->
     <div class="upload-section">
-        <form action="#">
-            <input type="file" id="file-upload-input" hidden>
-            <i class="fa-solid fa-cloud-arrow-up"></i>
+        <form action="/file/upload" method="POST" enctype="multipart/form-data">
+            <button type="submit"><i class="fa-solid fa-cloud-arrow-up" id="upload-button"></i></button>
             <p>Browse CSV File to Upload</p>
+            <input type="file" id="file-upload-input" accept=".csv" name="csv_file" required>
         </form>
     </div>
-
+    <!-- upload section end -->
+    <!-- show file  -->
     <div class="show-files">
-        <div class="csv-files">
-            <div class="csv-files-details">
-                <i class="fa-solid fa-file-lines"></i>
-                <p>student.csv</p>
-                <span id="uploading">Uploading ...</span>
-                <span id="percentage">50%</span>
-            </div>
-            <div class="csv-file-others">
-                <div class="csv-file-size">2.24 MB</div>
-                <div class="csv-file-download">
-                    <div class="csv-file-process"></div>
+        <!-- csv-files -->
+        <% for(let i=0;i<filenames.length;i++){%>
+            <div class="csv-files">
+                <div class="csv-files-details">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <p>
+                        <%= filenames[i].substring(0,10) + ".csv" %>
+                    </p>
+                </div>
+                <div class="csv-files-others">
+                    <div class="csv-file-open">
+                        <a href="/file/open/<%= i %>"><i class="fa-solid fa-folder-open"></i></a>
+                    </div>
+                    <div class="csv-files-delete">
+                        <a href="/file/delete/<%= i %>"><i class="fa-solid fa-trash"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        
+            <!-- csv-files end-->
+        <% } %>
     </div>
+    <!-- show file end -->
 </div>
 
 <script src="/Js/home.js"></script>

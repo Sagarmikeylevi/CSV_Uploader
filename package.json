@@ -10,8 +10,10 @@
   "author": "Sagar Das",
   "license": "ISC",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "express-ejs-layouts": "^2.5.1"
+    "express-ejs-layouts": "^2.5.1",
+    "multer": "^1.4.5-lts.1"
   }
 }
