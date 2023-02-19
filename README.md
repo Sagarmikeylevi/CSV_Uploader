@@ -12,6 +12,8 @@ The CSV Uploader is a simple web application that allows users to upload CSV (Co
 
 ![Screenshot (144)](https://user-images.githubusercontent.com/114811573/219950062-1a91cf94-439b-4b90-90a1-dbc9f45b862e.png)
 
+![Screenshot (146)](https://user-images.githubusercontent.com/114811573/219951177-853922ab-7d6b-4c8f-87b7-1881d2b46fab.png)
+
 
 ## Installation
 To run the CSV Uploader project on your local machine, follow these steps:
