@@ -10,6 +10,9 @@ The CSV Uploader is a simple web application that allows users to upload CSV (Co
 - JavaScript: A programming language used for adding interactivity to the application.
 - Express.js: A web application framework used for building the server-side of the application.
 
+![Screenshot (144)](https://user-images.githubusercontent.com/114811573/219950062-1a91cf94-439b-4b90-90a1-dbc9f45b862e.png)
+
+
 ## Installation
 To run the CSV Uploader project on your local machine, follow these steps:
 
