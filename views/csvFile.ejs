@@ -1,22 +1,28 @@
 <div class="csvFile-wrapper">
     <div class="project-search-bar">
+        <!-- Input field for searching items in the table -->
         <input type="text" id="project-search-bar-input" placeholder="Search items here..." onkeyup="search()">
+        <!-- Icon for the search button -->
         <i class="fa-solid fa-magnifying-glass"></i>
     </div>
 
     <div class='table-container' id="table-container">
+        <!-- Table header -->
         <table style="width:100%">
             <thead>
                 <tr>
+                    <!-- Loop through the keys of the first object in csvData to create the table headers -->
                     <% for (const [key, value] of Object.entries(csvData[0])) { %>
                        <th><%= key %></th>
                     <% } %>
                 </tr>
             </thead>
             <tbody id="table-body">
+                <!-- Limit the number of rows to 100 for performance reasons -->
                 <% if(csvData.length > 100){%>
                     csvData.length = 100;
                 <%}%>
+                <!-- Loop through each object in csvData and create a row in the table with the values -->
                 <% for(let i=0;i<csvData.length;i++) { %>
                     <tr>
                         <% for(const [key, value] of Object.entries(csvData[i])) { %>
@@ -29,4 +35,5 @@
     </div>
 </div>
 
+<!-- Import the JavaScript file for searching items in the table -->
 <script src="/Js/csvFile.js"></script>
