@@ -27,6 +27,9 @@ To run the CSV Uploader project on your local machine, follow these steps:
 ## Deployement
 Project already deployed on Render. Visit: https://csvuploader1.onrender.com/
 
+## Video Link
+Visit: https://youtu.be/2SnI4IkbRAA
+
 
 
 
